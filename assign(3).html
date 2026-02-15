@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Галерея</title>
+    <link rel="stylesheet" href="assign(3).css" />
+    <meta charset="utf-8" />
+  </head>
+
+  <body>
+    <p>
+      <img
+        id="largeImg"
+        src="https://en.js.cx/gallery/img1-lg.jpg"
+        alt="Large image"
+      />
+    </p>
+
+    <ul id="thumbs">
+      <li>
+        <a href="https://en.js.cx/gallery/img2-lg.jpg" title="Зображення 2"
+          ><img src="https://en.js.cx/gallery/img2-thumb.jpg"
+        /></a>
+      </li>
+      <li>
+        <a href="https://en.js.cx/gallery/img3-lg.jpg" title="Зображення 3"
+          ><img src="https://en.js.cx/gallery/img3-thumb.jpg"
+        /></a>
+      </li>
+      <li>
+        <a href="https://en.js.cx/gallery/img4-lg.jpg" title="Зображення 4"
+          ><img src="https://en.js.cx/gallery/img4-thumb.jpg"
+        /></a>
+      </li>
+      <li>
+        <a href="https://en.js.cx/gallery/img5-lg.jpg" title="Зображення 5"
+          ><img src="https://en.js.cx/gallery/img5-thumb.jpg"
+        /></a>
+      </li>
+      <li>
+        <a href="https://en.js.cx/gallery/img6-lg.jpg" title="Зображення 6"
+          ><img src="https://en.js.cx/gallery/img6-thumb.jpg"
+        /></a>
+      </li>
+    </ul>
+    <script>
+      let largeImgage = document.getElementById("largeImg");
+      let thumbs = document.getElementById("thumbs");
+      thumbs.onclick = function (event) {
+        let thumbnail = event.target.closest("a");
+        if (!thumbnail) return;
+        event.preventDefault();
+        largeImgage.src = thumbnail.href;
+        largeImgage.alt = thumbnail.title;
+      };
+    </script>
+  </body>
+</html>

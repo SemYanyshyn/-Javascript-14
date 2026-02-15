@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+  background: #9fa1a4;
+  font-family: Georgia, serif;
+}
+
+main {
+  width: 700px;
+  margin: 40px auto;
+  background: #dfe7c8;
+  border: 2px solid #b6c08a;
+}
+
+section {
+  position: relative;
+  padding: 25px;
+  border-bottom: 2px solid #b6c08a;
+}
+
+section:last-child {
+  border-bottom: none;
+}
+
+h2 {
+  margin: 0 0 10px 0;
+}
+
+p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  color: red;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  opacity: 0.6;
+}
